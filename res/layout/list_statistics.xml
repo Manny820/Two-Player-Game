@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:src="@drawable/orange_button"
+        />
+
+    <ImageView
+        android:id="@+id/redPlayer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/red_front_copy"/>
+
+    <ImageView
+        android:id="@+id/bluePlayer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="290dp"
+        android:src="@drawable/blue_front" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="@font/aclonica"
+        android:text="GAME"
+        android:textColor="#000000"
+        android:textSize="21sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TitleNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="0dp"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/redScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/blueScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="258dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <VideoView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ImageView
+        android:id="@+id/red_health"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="160dp"
+        android:src="@drawable/red_health_3_3" />
+
+    <ImageView
+        android:id="@+id/blue_health"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="630dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/blue_health_3_3" />
+
+    <FrameLayout
+        android:id="@+id/blue_frame"
+        android:layout_width="550dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp">
+
+        <ImageView
+            android:id="@+id/blue_bomb_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/bomb_ingame_up"
+            />
+
+        <ImageView
+            android:id="@+id/blue_explode_left"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/explode_down"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/blue_bomb_mid"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/bomb_ingame_up"
+            />
+
+        <ImageView
+            android:id="@+id/blue_explode_mid"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/explode_down"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/blue_bomb_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="470dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/bomb_ingame_up"
+            />
+
+        <ImageView
+            android:id="@+id/blue_explode_right"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="380dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/explode_down"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/blue_platform"
+            android:layout_width="550dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/blue_platform" />
+
+        <ImageView
+            android:id="@+id/blue_player"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="400dp"
+            android:src="@drawable/blue_front"
+            />
+    </FrameLayout>
+
+    <GridLayout
+        android:id="@+id/blue_controls"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <ImageButton
+            android:id="@+id/blue_left_btn"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/blue_left_button"
+            android:src="@drawable/left"
+            android:scaleType="fitCenter"
+            android:layout_column="0"
+            android:layout_row="0"
+            />
+
+        <ImageButton
+            android:id="@+id/blue_bomb_btn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/orange_button"
+            android:src="@drawable/bomb_icon_b"
+            android:scaleType="fitCenter"
+            android:layout_column="1"
+            android:layout_row="0"
+            />
+
+        <ImageButton
+            android:id="@+id/blue_right_btn"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/blue_right_button"
+            android:src="@drawable/right"
+            android:scaleType="fitCenter"
+            android:layout_column="2"
+            android:layout_row="0"
+            />
+    </GridLayout>
+
+    <FrameLayout
+        android:id="@+id/red_frame"
+        android:layout_width="550dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp">
+
+        <ImageView
+            android:id="@+id/red_bomb_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/bomb_ingame_down"
+            />
+
+        <ImageView
+            android:id="@+id/red_explode_right"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/explode_up"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/red_bomb_mid"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/bomb_ingame_down"
+            />
+
+        <ImageView
+            android:id="@+id/red_explode_mid"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/explode_up"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/red_bomb_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="470dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/bomb_ingame_down"
+            />
+
+        <ImageView
+            android:id="@+id/red_explode_left"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="380dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/explode_up"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/red_platform"
+            android:layout_width="550dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/red_platform" />
+
+        <ImageView
+            android:id="@+id/red_player"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/red_front"
+            />
+    </FrameLayout>
+
+    <GridLayout
+        android:id="@+id/red_controls"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <ImageButton
+            android:id="@+id/red_right_btn"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/red_left_button"
+            android:src="@drawable/left"
+            android:scaleType="fitCenter"
+            android:layout_column="0"
+            android:layout_row="0"
+            />
+
+        <ImageButton
+            android:id="@+id/red_bomb_btn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/orange_button"
+            android:src="@drawable/bomb_icon_r"
+            android:scaleType="fitCenter"
+            android:layout_column="1"
+            android:layout_row="0"
+            />
+
+        <ImageButton
+            android:id="@+id/red_left_btn"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/red_right_button"
+            android:src="@drawable/right"
+            android:scaleType="fitCenter"
+            android:layout_column="2"
+            android:layout_row="0"
+            />
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/timer_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/timer_title"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/aclonica"
+        android:text="VERSUS!"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        android:visibility="invisible"
+        />
+
+
+</RelativeLayout>
